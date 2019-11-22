@@ -1,0 +1,22 @@
+logLevel = "INFO"
+
+[entryPoints]
+  [entryPoints.http]
+    address = ":80"
+
+[traefikLog]
+
+[accessLog]
+
+[api]
+
+[file]
+
+[frontends]
+  [frontends.frontend1]
+    entryPoints = ["http"]
+    backend = "backend1"
+
+[backends]
+  [backends.backend1.servers.server1]
+    url = "http://{{ proxy_storage }}"

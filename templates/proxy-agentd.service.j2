@@ -1,0 +1,11 @@
+[Unit]
+Description=Proxy agent service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/proxy-agentd -d loghttp -c /etc/proxy_conf.json
+Restart = on-failure
+RestartSec = 5
+
+[Install]
+WantedBy=multi-user.target

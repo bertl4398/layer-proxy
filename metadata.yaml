@@ -1,0 +1,9 @@
+name: proxy
+summary: A charm that runs the proxy agent
+maintainer: benjamin <b.ertl@agentscape.de>
+description: |
+  This is a charm that runs the proxy agent.
+tags:
+  - misc
+series:
+  - bionic

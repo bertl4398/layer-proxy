@@ -1,0 +1,7 @@
+includes:
+  - 'layer:basic'
+  - 'layer:options'
+options:
+  basic:
+    packages:
+      - ulogd2

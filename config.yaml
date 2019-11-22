@@ -1,0 +1,9 @@
+options:
+  proxy-storage:
+    type: string
+    default: "10.73.73.59:9000"
+    description: "IP and port of proxy storage"
+  proxy-honeypot:
+    type: string
+    default: "10.73.73.246:9000"
+    description: "IP and port of proxy honeypot"

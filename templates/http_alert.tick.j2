@@ -1,0 +1,13 @@
+dbrp "loghttp"."autogen"
+
+stream
+    |from()
+        .measurement('flow')
+    |window()
+        .period(2s)
+        .every(2s)
+    |groupBy('ip.saddr')
+    |alert()
+        .crit(lambda: count() > 1000)
+        .message('RDR {{ redirect }}')
+        .tcp('127.0.0.1:9988')
